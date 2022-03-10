@@ -5,11 +5,12 @@
 
         <IsPackable>false</IsPackable>
         <GenerateProgramFile>false</GenerateProgramFile>
-        <OutputType>Library</OutputType>
+        <RootNamespace>TestProject2</RootNamespace>
     </PropertyGroup>
 
     <ItemGroup>
         <Compile Include="Tests.fs" />
+        <Compile Include="Program.fs" />
     </ItemGroup>
 
     <ItemGroup>
