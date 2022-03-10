@@ -26,3 +26,6 @@ jobs:
       - name: Run unit tests
         run: for f in $(find . -name "*.sln"); do dotnet test $f; done
 
+
+       
+
