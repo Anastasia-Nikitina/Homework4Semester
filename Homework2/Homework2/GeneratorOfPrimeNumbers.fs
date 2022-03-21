@@ -1,9 +1,9 @@
 module Homework2.GeneratorOfPrimeNumbers
 
 let isPrime number =           
-    seq{float 2 .. (sqrt (float number))}
-    |>  Seq.forall(fun x -> number % (int x) <> 0)
+    ((fun x -> number % (int x) <> 0), seq{float 2 .. (sqrt (float number))})
+    ||>  Seq.forall
  
 let generatePrimeNumbers =
-    Seq.initInfinite(fun x -> x + 2)
-    |> Seq.filter(isPrime)   
+    (isPrime, Seq.initInfinite(fun x -> x + 2))
+    ||> Seq.filter   
