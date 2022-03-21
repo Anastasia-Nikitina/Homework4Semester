@@ -9,6 +9,13 @@ open MapForBinaryTree
 open ArithmeticExpressionTree
 open GeneratorOfPrimeNumbers
 
+
+[<Test>]
+let testForCountEvenUsingMap () =
+    let list1 = [1; 5; 4; 2; 222; 9; 0]
+    let list2 = []
+    (countEvenUsingMap list1, countEvenUsingMap list2) |> should equal (4, 0)
+
 [<Test>]
 let mapShouldBeEqualFoldAndFilter () =
     let inner (list: list<int>) =
@@ -25,9 +32,14 @@ let testForMapBinaryTree () =
     mapForTree (fun x -> x * 2) tree1  |> should equal tree2
  
 [<Test>]     
-let testForArithmeticExpressionTree () =
+let testForSubAndMult () =
     let tree = Node(Node(Leaf 6, Subtraction, Leaf 3), Multiplication, Leaf 5)
     calculateTree tree |> should equal 15
+
+[<Test>]
+let testForDivSumAndMult () =
+    let tree = Node(Node(Leaf 10, Division, Leaf 2), Multiplication, (Node (Leaf 1, Addition, Leaf 0)))
+    calculateTree tree |> should equal 5
     
 [<Test>]
 let testForGeneratorPrimeNumbers () =

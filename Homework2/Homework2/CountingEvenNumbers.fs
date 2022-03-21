@@ -1,15 +1,15 @@
 ﻿module Homework2.CountingEvenNumbers
 
 let countEvenUsingMap list =
-    ((fun x -> if x % 2 = 0 then 1 else 0), list)
-    ||> List.map
+    list
+    |> List.map(fun x -> if x % 2 = 0 then 1 else 0)
     |> List.sum
     
 let countEvenUsingFilter list =
-    ((fun x -> x % 2 = 0), list)
-    ||> List.filter
+    list
+    |> List.filter(fun x -> x % 2 = 0)
     |> List.length
     
 let countEvenUsingFold list =
-    ((fun acc x -> if x % 2 = 0 then (acc + 1) else acc), 0, list)
-    |||> List.fold  
+    list
+    |> List.fold(fun acc x -> if x % 2 = 0 then (acc + 1) else acc) 0
