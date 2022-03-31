@@ -36,4 +36,8 @@ let findNumber n list =
         | head :: tail ->
             if head = n then acc
             else inner n tail (acc + 1)
-    inner n list 0  
+    inner n list 0 
+    
+    
+
+ 
