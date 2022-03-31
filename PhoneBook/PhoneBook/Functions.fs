@@ -35,3 +35,4 @@ let readFromFile path =
     |> Seq.toList
     |> List.map(fun (record: string) -> record.Split(' '))
     |> List.map(fun (a: string[]) -> Record(a[0], a[1]))
+
