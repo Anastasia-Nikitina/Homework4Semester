@@ -5,14 +5,23 @@ open FsUnit
 
 [<Test>]
 let testForRounding () =
-     let rounding = CalculatingWithRoundingBuilder(3)
+     let rounding = CalculatingWithRoundingBuilder 3
      let result = 
          rounding {
             let! a = 2.0 / 12.0
             let! b = 3.5
             return a / b
         }
-     result |> should equal 0.048    
+     result |> should equal 0.048
+    
+[<Test>]
+let testForNegativeRounding () =
+    (fun () ->
+        CalculatingWithRoundingBuilder -3 {
+            let! a = 2.0 / 7.0
+            let! b = 5.5
+            return a * b
+        } |> ignore) |> should throw typeof<System.ArgumentOutOfRangeException>
      
 [<Test>]
 let testForCorrectStrings () =
