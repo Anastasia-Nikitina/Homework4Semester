@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MiniCrawler", "MiniCrawler\MiniCrawler.fsproj", "{610C9A88-8C42-4E96-BDF6-1ADE39DCA51B}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "MiniCrawler.Tests", "MiniCrawler.Tests\MiniCrawler.Tests.fsproj", "{CE2EA811-10BB-41B2-AF46-B6A9B2655CAD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{610C9A88-8C42-4E96-BDF6-1ADE39DCA51B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{610C9A88-8C42-4E96-BDF6-1ADE39DCA51B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{610C9A88-8C42-4E96-BDF6-1ADE39DCA51B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{610C9A88-8C42-4E96-BDF6-1ADE39DCA51B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE2EA811-10BB-41B2-AF46-B6A9B2655CAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE2EA811-10BB-41B2-AF46-B6A9B2655CAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE2EA811-10BB-41B2-AF46-B6A9B2655CAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE2EA811-10BB-41B2-AF46-B6A9B2655CAD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
