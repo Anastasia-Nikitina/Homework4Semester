@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PhoneBook", "PhoneBook\PhoneBook.fsproj", "{A95FFE58-1E31-4A44-B528-5FC90CE6B373}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "PhoneBook.Tests", "PhoneBook.Tests\PhoneBook.Tests.fsproj", "{282876D9-B56C-4917-86A7-8A1E1E6BC66C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A95FFE58-1E31-4A44-B528-5FC90CE6B373}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A95FFE58-1E31-4A44-B528-5FC90CE6B373}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A95FFE58-1E31-4A44-B528-5FC90CE6B373}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A95FFE58-1E31-4A44-B528-5FC90CE6B373}.Release|Any CPU.Build.0 = Release|Any CPU
+		{282876D9-B56C-4917-86A7-8A1E1E6BC66C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{282876D9-B56C-4917-86A7-8A1E1E6BC66C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{282876D9-B56C-4917-86A7-8A1E1E6BC66C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{282876D9-B56C-4917-86A7-8A1E1E6BC66C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,4 +1,4 @@
-﻿module Homework1.Functions
+module Homework1.Functions
 
 open Microsoft.FSharp.Collections
 
@@ -8,7 +8,7 @@ let factorial n =
         if n = 0 then acc
         else inner (n - 1) (acc * n)
     inner n 1
-    
+
 let fibonacci n =
     if n < 0 then failwith "Fibonacci numbers are numbered starting from zero"
     let rec inner n acc1 acc2 =
@@ -22,7 +22,7 @@ let reverse list =
         | [] ->  acc
         | head :: tail -> inner tail (head :: acc)
     inner list []
-    
+
 let powersOfTwo n m =
     let rec inner m acc =
         if m = 0 then reverse acc
@@ -36,4 +36,5 @@ let findNumber n list =
         | head :: tail ->
             if head = n then acc
             else inner n tail (acc + 1)
-    inner n list 0  
+    inner n list 0 
+
