@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FLazy", "FLazy\FLazy.fsproj", "{B8092F1B-1C73-43FC-ACFD-B84DC7C08A7D}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "FLazy.Tests", "FLazy.Tests\FLazy.Tests.fsproj", "{303AEA05-F30F-4DEB-A681-231CABEC2E0B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B8092F1B-1C73-43FC-ACFD-B84DC7C08A7D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B8092F1B-1C73-43FC-ACFD-B84DC7C08A7D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B8092F1B-1C73-43FC-ACFD-B84DC7C08A7D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B8092F1B-1C73-43FC-ACFD-B84DC7C08A7D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{303AEA05-F30F-4DEB-A681-231CABEC2E0B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{303AEA05-F30F-4DEB-A681-231CABEC2E0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{303AEA05-F30F-4DEB-A681-231CABEC2E0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{303AEA05-F30F-4DEB-A681-231CABEC2E0B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
