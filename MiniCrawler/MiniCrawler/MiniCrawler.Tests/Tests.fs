@@ -9,8 +9,8 @@ let TestForPageWithTwoLinks () =
     "https://www.anekdot.ru/"
     |> getAllSizes
     |> Async.RunSynchronously
-    |> should equivalent [("https://gb.anekdot.ru/login/", Some 19196)
-                          ("https://gb.anekdot.ru/register/", Some 20392)]
+    |> should equivalent [("https://gb.anekdot.ru/login/", Some 19486)
+                          ("https://gb.anekdot.ru/register/", Some 20624)]
  
 [<Test>]   
 let TestForPageWithoutLinks () =
