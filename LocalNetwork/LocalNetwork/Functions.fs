@@ -6,6 +6,7 @@ type OS  =
     | Windows
     | Linux
     | MacOS
+    | MyOS
 
 type Computer(name: int, os: OS, isInfected: bool) =
     let probability () =
@@ -13,6 +14,7 @@ type Computer(name: int, os: OS, isInfected: bool) =
         | Windows -> 0.7
         | Linux -> 0.5
         | MacOS -> 0.6
+        | MyOS -> 0.0
     member this.Name = name
     member this.OS = os
     member val IsInfected = isInfected with get, set
@@ -31,19 +33,23 @@ type Network (computers: List<Computer>, communication: List<int*int>, ?randomiz
         if (communication |> List.contains((comp1.Name, comp2.Name))) &&
             (comp1Inf && not comp2Inf) || (not comp1Inf && comp2Inf)
         then
-            if (comp1.IsInfected) && (comp2.Probability() < random.NextDouble())
+            if (comp1.Probability() > 0 && not comp1.IsInfected) ||  (comp2.Probability() > 0 && not comp2.IsInfected)
             then
-                comp2.IsInfected <- true
-                comp2.NewInfected <- true
-            if (comp2.IsInfected) && (comp2.Probability() < random.NextDouble())
-            then
-                comp1.IsInfected <- true
-                comp1.NewInfected <- true
+                this.IsFinalState <- false            
+                if (comp1.IsInfected) && (comp2.Probability() > random.NextDouble())
+                then
+                    comp2.IsInfected <- true
+                    comp2.NewInfected <- true
+                if (comp2.IsInfected) && (comp1.Probability() > random.NextDouble())
+                then
+                    comp1.IsInfected <- true
+                    comp1.NewInfected <- true
         
     member this.Communication = communication
     member val IsFinalState = false with get, set 
-    member this.Step =
+    member this.Step() =
         this.Computers |> List.iter(fun x -> x.NewInfected <- false )
+        this.IsFinalState <- true
         let step () =
             let rec inner (list: List<Computer>) =
                 match list with
@@ -55,12 +61,12 @@ type Network (computers: List<Computer>, communication: List<int*int>, ?randomiz
             inner computers |> ignore
         step()   
     
-    member this.Start =
+    member this.Start() =
         let mutable numberOfStep = 1
         if (this.Computers |> List.filter(fun x -> x.IsInfected)).Length <> 0
         then
-            while this.Computers.Length <> (this.Computers |> List.filter(fun x -> x.IsInfected)).Length do
-                this.Step
+            while not this.IsFinalState do
+                this.Step()
                 printfn $"Step number %A{numberOfStep}"
                 this.Computers
                 |> List.iter(fun x -> printfn $"Computer %A{x.Name}. Is infected: %A{x.IsInfected}")
