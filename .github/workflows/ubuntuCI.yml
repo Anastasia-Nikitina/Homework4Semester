@@ -24,8 +24,7 @@ jobs:
         run: for f in $(find . -name "*.sln"); do dotnet build $f; done
 
       - name: Run unit tests
+
         run: for f in $(find . -name "*.sln"); do dotnet test $f; done
 
-
-       
 
